@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetCountriesService } from 'src/app/services/get-countries.service';
 
 @Component({
   selector: 'app-countries-list',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./countries-list.component.scss']
 })
 export class CountriesListComponent implements OnInit {
+  countries = []
 
-  constructor() { }
+  constructor(
+    protected getCountriesService: GetCountriesService
+  ) { }
 
   ngOnInit() {
+    this.getCountriesService.requestCountries()
+      .subscribe(response => this.countries = response.map(country => country))
   }
 
 }

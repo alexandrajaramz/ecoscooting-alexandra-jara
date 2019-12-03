@@ -1,26 +1,28 @@
-<p>{{country.name}}</p>
-<p>{{country.capital}}</p>
-<p>{{country.subregion}}</p>
-<p>{{country.region}}</p>
-<img src={{country.flag}} alt="Bandera de {{country.name}}" width="150px">
-<p>Population: {{country.population}}</p>
-<ul>
-  <li>Currencies:</li>
-  <li *ngFor="let currency of country.currencies">
-    <p>{{currency.name}}</p>
-  </li>
-</ul>
-<ul>
-  <li>Languages:</li>
-  <li *ngFor="let language of country.languages">
-    <p>{{language.name}}</p>
-  </li>
-</ul>
-<ul>
-  <li>Timezones:</li>
-  <li *ngFor="let timezone of country.timezones">
-    <p>{{timezone}}</p>
-  </li>
-</ul>
-<button (click)="goBack()">Back</button>
+<section class="country__detail">
+  <button (click)="goBack()" class="detail-btnBack"><i class="fas fa-angle-left back-icon"></i></button>
+  <article class="detail__country">
+    <img src={{country.flag}} alt="Bandera de {{country.name}}" class="detail__country-img">
+    <div class="detail__country-info">
+      <div class="info__name-cap">
+        <p class="info__name"><span class="info-data capital">{{country.name}}</span></p>
+        <p class="info__capital">Capital: <span class="info-data">{{country.capital}}</span></p>
+      </div>
+      <div class="info__region-subr">
+        <p class="info__region"><i class="fas fa-globe-europe info-icon"></i> Region: <span class="info-data">{{country.region}}</span></p>
+        <p><i class="fas fa-globe-asia info-icon"></i> Subregion: <span class="info-data">{{country.subregion}}</span></p>
+      </div>
+      <p class="info__population"><i class="fas fa-user info-icon"></i> Population: <span class="info-data">{{country.population}}</span></p>
+      <ul class="info__currencies"><i class="fas fa-coins info-icon"></i> Currencies:
+        <li *ngFor="let currency of country.currencies" class="info-data">{{currency.name}} </li>
+      </ul>
+      <ul class="info__languages"><i class="fas fa-comment info-icon"></i> Languages:
+        <li *ngFor="let language of country.languages" class="info-data">{{language.name}} </li>
+      </ul>
+      <ul class="info__timezones"><i class="fas fa-clock info-icon"></i> Timezones:
+        <li *ngFor="let timezone of country.timezones" class="info-data">{{timezone}} </li>
+      </ul>
+    </div>
+  </article>
+</section>
+
 

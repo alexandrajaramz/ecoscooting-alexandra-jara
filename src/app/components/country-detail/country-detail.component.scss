@@ -1,0 +1,58 @@
+.country__detail {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+}
+
+.detail-btnBack {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  .back-icon {
+    color: rgb(56, 56, 56);
+    font-size: 30px;
+  }
+}
+
+.detail__country {
+  margin-top: 10vh;
+  max-width: 270px;
+  background-color: rgb(240, 240, 240);
+}
+
+.detail__country-img {
+  max-width: 270px;
+}
+
+.detail__country-info {
+  padding: 10px;
+}
+
+.info__name-cap, .info__region-subr, .info__population, ul {
+  margin-bottom: 10px;
+}
+
+li {
+  padding-left: 25px;
+}
+
+.info-icon {
+  width: 20px;
+}
+
+.info-data {
+  font-weight: 600;
+}
+
+.capital {
+  font-size: 1.5em;
+}
+

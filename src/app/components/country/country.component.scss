@@ -1,0 +1,17 @@
+.country__card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.country__wrapper {
+  display: flex;
+}
+
+.country__img {
+  width: 50px;
+}
+
+.country__info {
+  padding: 0 12px;
+}

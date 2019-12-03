@@ -1,0 +1,27 @@
+.app {
+  min-height: 100vh;
+}
+
+.app__header {
+  margin: 20px;
+}
+
+.header-title {
+  padding: 0 10px;
+  border-left: 1px solid grey;
+  color: rgb(56, 56, 56);
+}
+
+.header-text {
+  padding: 5px 10px;
+  border-left: 1px solid grey;
+}
+
+.app__main {
+  margin: 20px;
+}
+
+.app__footer {
+  margin: 80px 20px 20px;
+  text-align: center;
+}

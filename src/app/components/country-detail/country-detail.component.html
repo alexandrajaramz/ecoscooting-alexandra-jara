@@ -1,1 +1,26 @@
-<p>country-detail works!</p>
+<p>{{country.name}}</p>
+<p>{{country.capital}}</p>
+<p>{{country.subregion}}</p>
+<p>{{country.region}}</p>
+<img src={{country.flag}} alt="Bandera de {{country.name}}" width="150px">
+<p>Population: {{country.population}}</p>
+<ul>
+  <li>Currencies:</li>
+  <li *ngFor="let currency of country.currencies">
+    <p>{{currency.name}}</p>
+  </li>
+</ul>
+<ul>
+  <li>Languages:</li>
+  <li *ngFor="let language of country.languages">
+    <p>{{language.name}}</p>
+  </li>
+</ul>
+<ul>
+  <li>Timezones:</li>
+  <li *ngFor="let timezone of country.timezones">
+    <p>{{timezone}}</p>
+  </li>
+</ul>
+<button (click)="goBack()">Back</button>
+

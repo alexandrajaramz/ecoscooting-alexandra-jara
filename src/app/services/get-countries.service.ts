@@ -15,4 +15,10 @@ export class GetCountriesService {
     return this.http.get<any>(ENDPOINT);
   }
 
+  requestCountryDetail(code: string){
+    const baseUrl = 'https://restcountries.eu/rest/v2/alpha/{alphaCode}';
+    const ENDPOINT = baseUrl.replace('{alphaCode}', code);
+    return this.http.get<any>(ENDPOINT);
+  }
+
 }

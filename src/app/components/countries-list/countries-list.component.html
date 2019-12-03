@@ -1,5 +1,5 @@
 <ul class="countries__list">
     <li *ngFor="let country of countries">
-      <app-country [country]="country"></app-country>
+      <app-country [country]="country" (click)="openDetail(country.alpha3Code)"></app-country>
     </li>
   </ul>

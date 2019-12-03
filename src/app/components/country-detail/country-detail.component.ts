@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { GetCountriesService } from 'src/app/services/get-countries.service';
 
 @Component({
   selector: 'app-country-detail',
@@ -6,10 +8,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./country-detail.component.scss']
 })
 export class CountryDetailComponent implements OnInit {
+  alpha3Code: string  = '';
+  country: object = {};
 
-  constructor() { }
+  constructor(
+    protected router: Router,
+    protected route: ActivatedRoute,
+    protected getCountriesService: GetCountriesService
+  ) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.findCountryDetail(params);
+    });
+  }
+
+  findCountryDetail(params) {
+    this.alpha3Code = params.get('id');
+    console.log(this.alpha3Code);
+    this.getCountriesService.requestCountryDetail(this.alpha3Code)
+      .subscribe(response => this.country = response)
+  }
+
+  goBack() {
+    this.router.navigate(['/home']);
   }
 
 }

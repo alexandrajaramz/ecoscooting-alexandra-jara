@@ -25,7 +25,6 @@ export class CountryDetailComponent implements OnInit {
 
   findCountryDetail(params) {
     this.alpha3Code = params.get('id');
-    console.log(this.alpha3Code);
     this.getCountriesService.requestCountryDetail(this.alpha3Code)
       .subscribe(response => this.country = response)
   }

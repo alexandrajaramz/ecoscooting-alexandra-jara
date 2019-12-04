@@ -9,7 +9,9 @@
 }
 
 .country__img {
-  width: 50px;
+  min-width: 50px;
+  max-width: 55px;
+  height: 40px;
 }
 
 .country__info {

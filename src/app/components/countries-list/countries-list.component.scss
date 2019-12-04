@@ -1,5 +1,17 @@
 .countries__list {
   margin-top: 3rem;
+
+  @media all and (min-width: 500px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  @media all and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 25px;
+  }
 }
 
 .countries__list-item {
@@ -7,4 +19,9 @@
   margin: 20px 0;
   padding: 10px;
   border-bottom: 1px solid grey;
+  background-color: rgb(232, 232, 232);
+}
+
+.countries__list-item:hover {
+  box-shadow: 5px 10px 15px #9c9c9c;
 }

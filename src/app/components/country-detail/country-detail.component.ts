@@ -9,7 +9,7 @@ import { GetCountriesService } from 'src/app/services/get-countries.service';
 })
 export class CountryDetailComponent implements OnInit {
   alpha3Code: string  = '';
-  country: object = {};
+  country: any = {};
 
   constructor(
     protected router: Router,

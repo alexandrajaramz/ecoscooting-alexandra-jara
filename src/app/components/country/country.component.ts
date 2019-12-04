@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./country.component.scss']
 })
 export class CountryComponent implements OnInit {
-  @Input('country') country: Array<object> = [];
+  @Input('country') country: any = {};
 
   constructor() { }
 
